@@ -21,7 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'camera_stand_up = camera_package.camera_stand_up:main',
-            'camera_stand_up = camera_package.camera_stand_up_combination:main',
+            'camera_stand_up_combination = camera_package.camera_stand_up_combination:main',
         ],
     },
 )
