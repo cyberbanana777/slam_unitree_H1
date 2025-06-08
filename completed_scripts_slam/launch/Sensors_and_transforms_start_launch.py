@@ -46,7 +46,7 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        #livox_ros_driver2_launch,
+        livox_ros_driver2_launch,
         livox_to_pointcloud2_node,
         pointcloud_to_laserscan_launch,
     ])

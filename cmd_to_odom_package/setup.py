@@ -1,8 +1,6 @@
-import os
 from setuptools import setup
-from glob import glob
 
-package_name = 'completed_scripts_slam'
+package_name = 'cmd_to_odom_package'
 
 setup(
     name=package_name,
@@ -12,19 +10,17 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name, 'launch'), glob('launch/*_launch.py')),
-        (os.path.join('share', package_name, 'config'), glob('config/*.rviz')),
-
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='banana-killer',
     maintainer_email='sashagrachev@gmail.com',
     description='TODO: Package description',
-    license='TODO: License declaration',
+    license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'cmd_to_odom_node = cmd_to_odom_package.cmd_to_odom_node:main'
         ],
     },
 )

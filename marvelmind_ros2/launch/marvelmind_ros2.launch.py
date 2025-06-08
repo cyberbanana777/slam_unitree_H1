@@ -32,7 +32,7 @@ def generate_launch_description():
         package='marvelmind_ros2',
         executable='marvelmind_ros2',
         output='screen',
-        arguments=['--ros-args', '--log-level', 'rclcpp:=WARN', '--log-level', 'hedgehog_logger:=INFO'],
+        #arguments=['--ros-args', '--log-level', 'rclcpp:=WARN', '--log-level', 'hedgehog_logger:=INFO'],
         parameters=[LaunchConfiguration('marvelmind_ros2_config_file')],
     )
 
